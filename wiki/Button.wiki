@@ -1,0 +1,13 @@
+#summary *Button* is a Hardware Abstraction Library for Arduino, makes adding user interaction to your code easy.
+#labels Featured
+
+= Introduction =
+
+*Button* is a library for the Arduino.
+
+It is created to help Hardware Abstraction, and readability of code. It hides the pinMode, and digitalRead calls for the user.
+
+*Button* library is part of the Hardware Abstraction Libraries.
+
+
+= Details =
