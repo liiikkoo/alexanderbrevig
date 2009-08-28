@@ -1,4 +1,4 @@
-#summary *Button* is a Hardware Abstraction Library for Arduino, makes adding user interaction to your code easy.
+#summary Button is a Hardware Abstraction Library for Arduino, makes adding user interaction to your code easy.
 #labels Featured
 
 = Introduction =
