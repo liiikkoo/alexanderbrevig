@@ -1,5 +1,5 @@
 #summary TimedAction is an Utility library for Arduino that makes triggering reoccurring events easy.
-#labels Featured,Arduino,Documentation
+#labels Featured,Arduino,Documentation,UtilityLibrary
 
 <wiki:toc max_depth="2" />
 
@@ -26,7 +26,7 @@ Creates a `TimedAction` that waits minimum `prev` milliseconds, then triggers `f
   * `void check()` : Check to see if it's time to execute `function`
 
 =Examples=
-==HelloTimedAction==
+==`HelloTimedAction`==
 {{{
 //this sketch will blink an LED at pin 13 each second
 #include <TimedAction.h>
