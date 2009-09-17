@@ -1,5 +1,5 @@
 #summary Button is a Hardware Abstraction Library for Arduino, makes adding user interaction to your code easy.
-#labels Featured,Arduino,Documentation
+#labels Featured,Arduino,Documentation,HardwareAbstractionLibrary
 
 <wiki:toc max_depth="2" />
 
@@ -27,6 +27,7 @@ Creates a `Button` connected to `buttonPin` using mode `buttonMode`.
 =Examples=
 
 ==HelloButton==
+
 {{{
 #include <Button.h>
 
