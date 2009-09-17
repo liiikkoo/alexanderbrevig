@@ -1,5 +1,5 @@
 #summary TimedAction is an Utility library for Arduino that makes triggering reoccurring events easy.
-#labels Featured
+#labels Featured,Arduino,Documentation
 
 <wiki:toc max_depth="2" />
 
