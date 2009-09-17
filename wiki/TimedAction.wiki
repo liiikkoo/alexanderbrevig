@@ -1,22 +1,27 @@
 #summary TimedAction is an Utility library for Arduino that makes triggering reoccurring events easy.
 #labels Featured
 
-=Description=
+#sidebar TableOfContents
+`<wiki:toc max_depth="2" />`
 
+=Description=
 `TimedAction` is created to help hide the mechanics of how to implement [http://en.wikipedia.org/wiki/Protothreads Protothreading] and general millis() timing. It is sutied for those actions that needs to happen approximately every x milliseconds.
 
 
 =API=
 ==Constructors==
+{{{
 TimedAction(unsigned int interval, void (*function)())
-TimedAction(unsigned long prev, unsigned int interval,void (*function)())
-==Functions==
-void reset()
-void disable()
-void enable()
-void check()
+}}}
+Creates a `TimedAction` that triggers `function` every `interval` milliseconds.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+{{{
+TimedAction(unsigned long prev, unsigned int interval,void (*function)())
+}}}
+Creates a `TimedAction` that waits minimum `prev` milliseconds, then triggers `function` every `interval` milliseconds.
+
+==Functions==
+  * `void reset()` : Reset this `TimedAction`
+  * `void disable()` : Disable this `TimedAction`
+  * `void enable()` : Enable this `TimedAction`
+  * `void check()` : Check to see if it's time to execute `function`
