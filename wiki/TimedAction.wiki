@@ -20,10 +20,12 @@ TimedAction(unsigned long prev, unsigned int interval,void (*function)())
 Creates a `TimedAction` that waits minimum `prev` milliseconds, then triggers `function` every `interval` milliseconds.
 
 ==Functions==
-  * `void reset()` : Reset this `TimedAction`
-  * `void disable()` : Disable this `TimedAction`
-  * `void enable()` : Enable this `TimedAction`
-  * `void check()` : Check to see if it's time to execute `function`
+<table border="0">
+ <tr><td>`void reset()`</td><td>Reset this `TimedAction`</td></tr>
+ <tr><td>`void disable()`</td><td>Disable this `TimedAction`</td></tr>
+ <tr><td>`void enable()`</td><td>Enable this `TimedAction`</td></tr>
+ <tr><td>`void check()`</td><td>Check to see if it's time to execute `function`</td></tr>
+</table>
 
 =Examples=
 ==`HelloTimedAction`==
