@@ -25,6 +25,7 @@ Creates a `Button` connected to `buttonPin` using mode `buttonMode`.
   * `bool uniquePress()` : Returns true one time per press
 
 =Examples=
+
 ==HelloButton==
 {{{
 #include <Button.h>
@@ -42,5 +43,4 @@ void loop(){
 	digitalWrite(13,LOW);
   }
 }
-
 }}}
