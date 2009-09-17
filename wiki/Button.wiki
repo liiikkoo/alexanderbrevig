@@ -1,13 +1,46 @@
 #summary Button is a Hardware Abstraction Library for Arduino, makes adding user interaction to your code easy.
-#labels Featured
+#labels Featured,Arduino,Documentation
 
-= Introduction =
+<wiki:toc max_depth="2" />
 
-*Button* is a library for the Arduino.
+=Description=
+`Button` is created to help Hardware Abstraction, and readability of code. It hides the pinMode, and digitalRead calls for the user.
 
-It is created to help Hardware Abstraction, and readability of code. It hides the pinMode, and digitalRead calls for the user.
-
-*Button* library is part of the Hardware Abstraction Libraries.
+`Button` library is part of the Hardware Abstraction Libraries.
 
 
-= Details =
+=API=
+==Constructors==
+{{{
+Button(uint8_t buttonPin, uint8_t buttonMode=PULLDOWN)
+}}}
+Creates a `Button` connected to `buttonPin` using mode `buttonMode`.
+
+==Functions==
+  * `void pullup()` : Enable PULLUP mode
+  * `void pulldown()` : Enable PULLDOWN mode
+  * `bool isPressed()` : Check to see if this `Button` is pressed
+  * `bool wasPressed()` : Check to see if this `Button` was pressed last check
+  * `bool stateChanged()` : Check to see if the `Button` changed state between the two last reads
+  * `bool uniquePress()` : Returns true one time per press
+
+=Examples=
+==HelloButton==
+{{{
+#include <Button.h>
+
+Button button = Button(12,PULLUP); //create a Button object at pin 12
+
+void setup(){
+  pinMode(13,OUTPUT); //debug to led 13
+}
+
+void loop(){
+  if(button.isPressed()){
+	digitalWrite(13,HIGH);
+  }else{
+	digitalWrite(13,LOW);
+  }
+}
+
+}}}
