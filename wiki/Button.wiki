@@ -26,7 +26,7 @@ Creates a `Button` connected to `buttonPin` using mode `buttonMode`.
 
 =Examples=
 
-==HelloButton==
+==`HelloButton`==
 
 {{{
 #include <Button.h>
