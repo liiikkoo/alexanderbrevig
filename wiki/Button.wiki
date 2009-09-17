@@ -17,12 +17,14 @@ Button(uint8_t buttonPin, uint8_t buttonMode=PULLDOWN)
 Creates a `Button` connected to `buttonPin` using mode `buttonMode`.
 
 ==Functions==
-  * `void pullup()` : Enable PULLUP mode
-  * `void pulldown()` : Enable PULLDOWN mode
-  * `bool isPressed()` : Check to see if this `Button` is pressed
-  * `bool wasPressed()` : Check to see if this `Button` was pressed last check
-  * `bool stateChanged()` : Check to see if the `Button` changed state between the two last reads
-  * `bool uniquePress()` : Returns true one time per press
+<table border="0">
+ <tr><td>`void pullup()`</td><td>Enable PULLUP mode</td></tr>
+ <tr><td>`void pulldown()`</td><td>Enable PULLDOWN mode</td></tr>
+ <tr><td>`void isPressed()`</td><td>Check to see if this `Button` is pressed</td></tr>
+ <tr><td>`void wasPressed()`</td><td>Check to see if this `Button` was pressed last check</td></tr>
+ <tr><td>`void stateChanged()`</td><td>Check to see if the `Button` changed state between the two last readse</td></tr>
+ <tr><td>`void uniquePress()`</td><td>Returns true one time per press</td></tr>
+</table>
 
 =Examples=
 
