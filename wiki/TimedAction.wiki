@@ -1,8 +1,7 @@
 #summary TimedAction is an Utility library for Arduino that makes triggering reoccurring events easy.
 #labels Featured
 
-#sidebar TableOfContents
-`<wiki:toc max_depth="2" />`
+<wiki:toc max_depth="2" />
 
 =Description=
 `TimedAction` is created to help hide the mechanics of how to implement [http://en.wikipedia.org/wiki/Protothreads Protothreading] and general millis() timing. It is sutied for those actions that needs to happen approximately every x milliseconds.
@@ -25,3 +24,33 @@ Creates a `TimedAction` that waits minimum `prev` milliseconds, then triggers `f
   * `void disable()` : Disable this `TimedAction`
   * `void enable()` : Enable this `TimedAction`
   * `void check()` : Check to see if it's time to execute `function`
+
+=Examples=
+==HelloTimedAction==
+{{{
+//this sketch will blink an LED at pin 13 each second
+#include <TimedAction.h>
+
+//this initializes a TimedAction class that will change the state of an LED every second.
+TimedAction timedAction = TimedAction(1000,blink);
+
+//pin / state variables
+const byte ledPin = 13;
+boolean ledState = false;
+
+
+void setup(){
+  pinMode(ledPin,OUTPUT);
+  digitalWrite(ledPin,ledState);
+}
+
+void loop(){
+  timedAction.check();
+  //do something else
+}
+
+void blink(){
+  ledState ? ledState=false : ledState=true;
+  digitalWrite(ledPin,ledState);
+}
+}}}
