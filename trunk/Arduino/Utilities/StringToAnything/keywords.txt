@@ -1,2 +1,0 @@
-StringToAnything	KEYWORD1
-convert	KEYWORD2
